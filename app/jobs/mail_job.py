@@ -7,6 +7,7 @@ from app import utils
 from celery.decorators import periodic_task
 from celery.task.schedules import crontab
 import logging
+from IPython import embed
 
 logger = logging.getLogger(__name__)
 
@@ -15,10 +16,10 @@ def check_smtp(host, team):
     score = Score(team=team, check_name='smtp', check_number=current_number+1)
     logger.info('starting smtp check for {}'.format(team))
     try:
-        result = SMTP.check(host, 25, 'test', '{}.benron'.format(team), 'password')
+        result = SMTP.check(host, 25, 'superadmin', '{}.benron'.format(team), 'Ritsec123*')
         if result:
             logger.debug('{} smtp result: {}'.format(team, result))
-            score.success == True
+            score.success = True
     except Exception as e:
         logger.error('{} smtp failed with {}'.format(team, e))
     logger.info('finished smtp check for {}'.format(team))
@@ -33,10 +34,10 @@ def check_imap(host, team):
     score = Score(team=team, check_name='imap', check_number=current_number+1)
     logger.info('starting imap check for {}'.format(team))
     try:
-        result = IMAP.check(host, 143, 'test', 'password')
+        result = IMAP.check(host, 143, 'superadmin', 'Ritsec123*')
         if result:
             logger.debug('{} imap result: {}'.format(team, result))
-            score.success == True
+            score.success = True
     except Exception as e:
         logger.error('{} imap failed with {}'.format(team, e))
     logger.info('finished imap check for {}'.format(team))
@@ -62,3 +63,8 @@ def check_imap_team1():
 @periodic_task(run_every=crontab(minute='*/10'))
 def check_imap_team2():
     check_imap('10.120.2.13', 'team2')
+
+if __name__ == '__main__':
+    logging.basicConfig(level='DEBUG')
+    check_imap_team1()
+

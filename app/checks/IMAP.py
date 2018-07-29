@@ -13,7 +13,7 @@ def check(host, port, username, password, use_ssl=False):
             connection = imaplib.IMAP4_SSL(host=host, port=port)
         else:
             connection = imaplib.IMAP4(host=host, port=port)
-            logger.debug('connection', connection)
+            logger.debug('connection {}'.format(connection))
 
         with connection as mail:
             mail.login(user=username, password=password)

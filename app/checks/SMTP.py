@@ -28,7 +28,7 @@ def check(host, port, username, domain, password, use_ssl=False):
             # generate the subject line and send the email
             subject = f'ScoringCheck-{rand_hex_str(8)}'
             smtp.sendmail(from_addr=username,
-                          to_addrs=f'scoring@{domain}',
+                          to_addrs=f'superadmin@{domain}',
                           msg=f'Subject: {subject}\n\n{rand_hex_str(32)}')
 
             # if successful, return subject

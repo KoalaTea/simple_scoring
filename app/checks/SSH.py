@@ -1,7 +1,7 @@
 import paramiko
 from paramiko.ssh_exception import SSHException
 
-check_command = 'cat /home/scoring/check.txt'
+check_command = 'whoami'
 
 def check(host, port, username, password):
     client = paramiko.SSHClient()

@@ -8,7 +8,10 @@ def check(host, domain):
     resolver = dns.resolver.Resolver()
     resolver.nameservers = [host]
     try:
-        result = resolver.query(domain)
+        result = resolver.query(domain, 'A')
+        for data in result:
+            if data.address:
+                result = data
     except Exception as e:
         logger.error(e)
         result = False
