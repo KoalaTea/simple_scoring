@@ -1,13 +1,10 @@
-from ..mod_check import app
 import requests
 import hashlib
 from logging import getLogger
 
 logger = getLogger('mod_check.HTTP')
 
-
-@app.task
-def check(host, stored_hash, uri, port=None, use_ssl=False):
+def check(host, stored_hash, uri='/', port=None, use_ssl=False):
     """Perform HTTP/HTTPS check against a target
 
     Perform HTTP check by default. Match SHA-512 hash of the body of the page with a stored hash. If the hashes match, the check succeeds.
@@ -45,7 +42,7 @@ def check(host, stored_hash, uri, port=None, use_ssl=False):
         # Calculate hash of current page with supplied hash in short form
         new_hash = hashlib.sha512(resp.content).hexdigest()
         # Verify new hash matches stored hash
-
+        logger.debug('{} has has {}'.format(url, new_hash))
         if new_hash == stored_hash:
             result = True
         else:

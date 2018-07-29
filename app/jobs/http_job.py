@@ -8,6 +8,7 @@ def check_http_team1():
     logger.info('checking http for team 1')
     score = Score(team='team1', check_name='http', check_number=1)
     result = HTTP.check('1.1.1.1', '5')
+    logger.debug('')
     if result:
         logger.debug('team1 http passed')
         score.success = True

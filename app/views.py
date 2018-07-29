@@ -1,6 +1,7 @@
 from . import app
 from .models import Auth, Score
 from .models import db
+from app import utils
 
 @app.route('/')
 def index():
@@ -14,9 +15,21 @@ def login():
 @app.route('/score')
 def score():
     scores = Score.query.all()
-    team1 = [score for score in scores if score.team == 'team1']
-    team2 = [score for score in scores if score.team == 'team1']
-    return 'score'
+    current_check_team1 = utils.get_current_check('team1', 'ping')
+    current_check_team2 = utils.get_current_check('team2', 'ping')
+    team1 = ['{} {} -'.format(score.check_name, score.success) for score in scores if score.team == 'team1' and score.check_number == current_check_team1]
+    team2 = ['{} {} -'.format(score.check_name, score.success) for score in scores if score.team == 'team2' and score.check_number == current_check_team2]
+    text = '<html><body><p>'
+    text += '<h1>Check #{}</h1>'.format(current_check_team1)
+    text += '{}={}'.format('team1', ' '.join(team1))
+    text += '</p>\n<p>'
+    text += '{}={}'.format('team2', ' '.join(team2))
+    text += '</p></body></html>'
+    return text
+
+@app.route('/score/test')
+def specific_score():
+    return 'hi'
 
 @app.route('/start')
 def start():
