@@ -1,6 +1,6 @@
 from app.checks import SMTP
 from app.checks import IMAP
-from app.models import Score
+from app.models import Score, SSHCreds
 #from app import celery
 from app import db
 from app import utils
@@ -14,9 +14,13 @@ logger = logging.getLogger(__name__)
 def check_smtp(host, team):
     current_number = utils.get_current_check(team, 'smtp')
     score = Score(team=team, check_name='smtp', check_number=current_number+1)
+    creds = SSHCreds.query.all()
+    for cred in creds:
+        if cred.team == team:
+            the_cred = cred
     logger.info('starting smtp check for {}'.format(team))
     try:
-        result = SMTP.check(host, 25, 'superadmin', '{}.benron'.format(team), 'Ritsec123*')
+        result = SMTP.check(host, 25, 'superadmin', '{}.benron'.format(team), the_cred.password)
         if result:
             logger.debug('{} smtp result: {}'.format(team, result))
             score.success = True
@@ -32,9 +36,13 @@ def check_smtp(host, team):
 def check_imap(host, team):
     current_number = utils.get_current_check(team, 'imap')
     score = Score(team=team, check_name='imap', check_number=current_number+1)
+    creds = SSHCreds.query.all()
+    for cred in creds:
+        if cred.team == team:
+            the_cred = cred
     logger.info('starting imap check for {}'.format(team))
     try:
-        result = IMAP.check(host, 143, 'superadmin', 'Ritsec123*')
+        result = IMAP.check(host, 143, 'superadmin', the_cred.password)
         if result:
             logger.debug('{} imap result: {}'.format(team, result))
             score.success = True

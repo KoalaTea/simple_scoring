@@ -1,437 +1,282 @@
-[2018-07-29 17:09:51,672: INFO/MainProcess] Connected to redis://localhost:6379//
-[2018-07-29 17:09:51,687: INFO/MainProcess] mingle: searching for neighbors
-[2018-07-29 17:09:52,711: INFO/MainProcess] mingle: all alone
-[2018-07-29 17:09:52,721: INFO/MainProcess] celery@atlantis.team1.irsec ready.
-[2018-07-29 17:09:52,844: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[86fc5950-e6a9-4f95-856e-264d6c4a28a9]  
-[2018-07-29 17:09:52,846: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[aa0c534c-e847-4e87-8a23-00869bc2fc05]  
-[2018-07-29 17:09:52,848: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[40f918eb-14ab-425d-aa91-cf4eb77a7080]  
-[2018-07-29 17:09:52,850: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[609182b5-bddf-4bc5-9c91-084d54013552]  
-[2018-07-29 17:09:52,852: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[a9e42aea-9161-4a98-a5d8-e1f94af86157]  
-[2018-07-29 17:09:52,853: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[5be1e9ad-a6d6-4e11-8575-f3d7722a99a3]  
-[2018-07-29 17:09:52,855: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[8d34d1b1-17af-40c6-b374-21f667acbed0]  
-[2018-07-29 17:09:52,856: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[7308b0a6-b97f-4349-9bac-df3b8b7df4d9]  
-[2018-07-29 17:09:52,858: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[268585f7-0456-47a2-9f21-9b1d305ec56f]  
-[2018-07-29 17:09:52,881: INFO/ForkPoolWorker-2] starting imap check for team2
-[2018-07-29 17:09:52,883: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:09:52,921: INFO/ForkPoolWorker-2] finished imap check for team2
-[2018-07-29 17:09:52,929: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_imap_team2[86fc5950-e6a9-4f95-856e-264d6c4a28a9] succeeded in 0.0816500309992989s: None
-[2018-07-29 17:09:52,931: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[29c7bcab-0b24-423a-bcfa-d4c9b955c7d4]  
-[2018-07-29 17:09:52,937: INFO/ForkPoolWorker-2] starting ssh check for team 1
-[2018-07-29 17:09:52,997: INFO/ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:09:53,023: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:09:53,030: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[aa0c534c-e847-4e87-8a23-00869bc2fc05] succeeded in 0.1729616669999814s: None
-[2018-07-29 17:09:53,032: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[898474db-3d3c-430f-8bcf-511e081edc09]  
-[2018-07-29 17:09:53,033: INFO/ForkPoolWorker-1] checking ping for team 1
-[2018-07-29 17:09:53,043: WARNING/ForkPoolWorker-2] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.1.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
-  key.get_name(), hostname, hexlify(key.get_fingerprint()),
-[2018-07-29 17:09:53,058: INFO/ForkPoolWorker-1] finished checking ping for team 1
-[2018-07-29 17:09:53,068: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team1[609182b5-bddf-4bc5-9c91-084d54013552] succeeded in 0.03496061799887684s: None
-[2018-07-29 17:09:53,069: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[d1e3f39d-483a-4c10-9e49-32571f47dfaa]  
-[2018-07-29 17:09:53,070: INFO/ForkPoolWorker-1] checking ping for team 2
-[2018-07-29 17:09:53,089: INFO/ForkPoolWorker-1] finished checking ping for team 2
-[2018-07-29 17:09:53,093: INFO/ForkPoolWorker-2] Authentication (password) successful!
-[2018-07-29 17:09:53,100: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team2[a9e42aea-9161-4a98-a5d8-e1f94af86157] succeeded in 0.03000659099961922s: None
-[2018-07-29 17:09:53,104: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[db1f8952-d103-444a-ad57-1942fc0ab3b0]  
-[2018-07-29 17:09:53,107: INFO/ForkPoolWorker-1] starting dns check for team2
-[2018-07-29 17:09:53,111: INFO/ForkPoolWorker-1] finished dns check for team2
-[2018-07-29 17:09:53,116: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[5be1e9ad-a6d6-4e11-8575-f3d7722a99a3] succeeded in 0.012092813998606289s: None
-[2018-07-29 17:09:53,118: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[5108c408-8bd5-41b5-bbdb-5a9b7d9eda0b]  
-[2018-07-29 17:09:53,120: INFO/ForkPoolWorker-1] starting smtp check for team1
-[2018-07-29 17:09:53,241: INFO/ForkPoolWorker-2] finished ssh check for team 1
-[2018-07-29 17:09:53,249: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team1[40f918eb-14ab-425d-aa91-cf4eb77a7080] succeeded in 0.3161946119998902s: None
-[2018-07-29 17:09:53,251: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[53b0862f-1107-4a9f-a4cf-b3fd9ce6a72e]  
-[2018-07-29 17:09:53,253: INFO/ForkPoolWorker-1] finished smtp check for team1
-[2018-07-29 17:09:53,254: INFO/ForkPoolWorker-2] starting smtp check for team2
-[2018-07-29 17:09:53,259: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[8d34d1b1-17af-40c6-b374-21f667acbed0] succeeded in 0.1400932799988368s: None
-[2018-07-29 17:09:53,260: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[8fdbfec7-74cc-4dbc-b7ac-ea7809d09929]  
-[2018-07-29 17:09:53,262: INFO/ForkPoolWorker-1] starting dns check for team1
-[2018-07-29 17:09:53,264: INFO/ForkPoolWorker-1] finished dns check for team1
-[2018-07-29 17:09:53,268: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team1[268585f7-0456-47a2-9f21-9b1d305ec56f] succeeded in 0.008048239000345347s: None
-[2018-07-29 17:09:53,270: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[cd881931-dba3-4431-9b19-640fac42b73f]  
-[2018-07-29 17:09:53,273: INFO/ForkPoolWorker-1] starting ssh check for team 2
-[2018-07-29 17:09:53,300: INFO/ForkPoolWorker-2] finished smtp check for team2
-[2018-07-29 17:09:53,306: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team2[7308b0a6-b97f-4349-9bac-df3b8b7df4d9] succeeded in 0.05435189799936779s: None
-[2018-07-29 17:09:53,307: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[9fbd4be2-d3d4-4539-9936-35d7f7e50202]  
-[2018-07-29 17:09:53,312: INFO/ForkPoolWorker-2] starting ssh check for team 2
-[2018-07-29 17:09:53,321: INFO/ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:09:53,331: INFO/ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:09:53,365: WARNING/ForkPoolWorker-2] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.2.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
-  key.get_name(), hostname, hexlify(key.get_fingerprint()),
-[2018-07-29 17:09:53,374: WARNING/ForkPoolWorker-1] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.2.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
-  key.get_name(), hostname, hexlify(key.get_fingerprint()),
-[2018-07-29 17:09:53,417: INFO/ForkPoolWorker-2] Authentication (password) successful!
-[2018-07-29 17:09:53,427: INFO/ForkPoolWorker-1] Authentication (password) successful!
-[2018-07-29 17:09:53,596: WARNING/ForkPoolWorker-2] superadmin
-[2018-07-29 17:09:53,596: INFO/ForkPoolWorker-2] finished ssh check for team 2
-[2018-07-29 17:09:53,602: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team2[898474db-3d3c-430f-8bcf-511e081edc09] succeeded in 0.2930029369999829s: None
-[2018-07-29 17:09:53,604: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[28fdfd65-3cd4-4d9d-93d0-1f5567d44757]  
-[2018-07-29 17:09:53,608: INFO/ForkPoolWorker-2] starting dns check for team1
-[2018-07-29 17:09:53,613: INFO/ForkPoolWorker-2] finished dns check for team1
-[2018-07-29 17:09:53,615: WARNING/ForkPoolWorker-1] superadmin
-[2018-07-29 17:09:53,616: INFO/ForkPoolWorker-1] finished ssh check for team 2
-[2018-07-29 17:09:53,622: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team1[d1e3f39d-483a-4c10-9e49-32571f47dfaa] succeeded in 0.01671117600017169s: None
-[2018-07-29 17:09:53,624: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[70bfdd78-766d-4495-8bb0-1acd015414f2]  
-[2018-07-29 17:09:53,629: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team2[29c7bcab-0b24-423a-bcfa-d4c9b955c7d4] succeeded in 0.3587192420000065s: None
-[2018-07-29 17:09:53,631: INFO/ForkPoolWorker-2] starting smtp check for team2
-[2018-07-29 17:09:53,634: INFO/ForkPoolWorker-1] starting smtp check for team1
-[2018-07-29 17:09:53,653: INFO/ForkPoolWorker-2] finished smtp check for team2
-[2018-07-29 17:09:53,657: INFO/ForkPoolWorker-1] finished smtp check for team1
-[2018-07-29 17:09:53,665: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[5108c408-8bd5-41b5-bbdb-5a9b7d9eda0b] succeeded in 0.03346342300028482s: None
-[2018-07-29 17:09:53,670: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team2[db1f8952-d103-444a-ad57-1942fc0ab3b0] succeeded in 0.04513226100061729s: None
-[2018-07-29 17:09:53,672: INFO/ForkPoolWorker-2] checking ping for team 2
-[2018-07-29 17:09:53,673: INFO/ForkPoolWorker-1] starting dns check for team2
-[2018-07-29 17:09:53,675: INFO/ForkPoolWorker-1] finished dns check for team2
-[2018-07-29 17:09:53,681: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[53b0862f-1107-4a9f-a4cf-b3fd9ce6a72e] succeeded in 0.013142737001544447s: None
-[2018-07-29 17:09:53,682: INFO/ForkPoolWorker-1] checking ping for team 1
-[2018-07-29 17:09:53,697: INFO/ForkPoolWorker-2] finished checking ping for team 2
-[2018-07-29 17:09:53,706: INFO/ForkPoolWorker-1] finished checking ping for team 1
-[2018-07-29 17:09:53,718: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team2[8fdbfec7-74cc-4dbc-b7ac-ea7809d09929] succeeded in 0.04672888699860778s: None
-[2018-07-29 17:09:53,728: INFO/ForkPoolWorker-2] starting ssh check for team 1
-[2018-07-29 17:09:53,728: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team1[cd881931-dba3-4431-9b19-640fac42b73f] succeeded in 0.046098369000901585s: None
-[2018-07-29 17:09:53,734: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:09:53,740: INFO/ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:09:53,757: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:09:53,763: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[28fdfd65-3cd4-4d9d-93d0-1f5567d44757] succeeded in 0.03284886599976744s: None
-[2018-07-29 17:09:53,766: INFO/ForkPoolWorker-1] starting imap check for team2
-[2018-07-29 17:09:53,788: INFO/ForkPoolWorker-1] finished imap check for team2
-[2018-07-29 17:09:53,794: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team2[70bfdd78-766d-4495-8bb0-1acd015414f2] succeeded in 0.029581071001302917s: None
-[2018-07-29 17:09:53,837: INFO/ForkPoolWorker-2] Authentication (password) successful!
-[2018-07-29 17:09:53,974: INFO/ForkPoolWorker-2] finished ssh check for team 1
-[2018-07-29 17:09:53,981: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team1[9fbd4be2-d3d4-4539-9936-35d7f7e50202] succeeded in 0.2606931849986722s: None
-[2018-07-29 17:10:00,067: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[ebf694d5-9ed5-4167-9eb3-9133cbb4229b]  
-[2018-07-29 17:10:00,068: INFO/ForkPoolWorker-2] checking ping for team 2
-[2018-07-29 17:10:00,076: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[f20b2b7e-0300-4fbf-9306-3a9d892593b0]  
-[2018-07-29 17:10:00,078: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[79951e4e-78e6-4b55-909a-57a77944f85a]  
-[2018-07-29 17:10:00,081: INFO/ForkPoolWorker-1] starting smtp check for team1
-[2018-07-29 17:10:00,083: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[55f8c9bc-7ea6-4bed-857c-bdfc4d42fbf4]  
-[2018-07-29 17:10:00,086: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[8d240d01-3515-4053-962e-7254a02a0a81]  
-[2018-07-29 17:10:00,090: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[7fbdb527-3905-4a06-b873-0efa58ca7d15]  
-[2018-07-29 17:10:00,092: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[7a771862-2cf9-45ca-a8da-dc315dc9c146]  
-[2018-07-29 17:10:00,093: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[f3631391-b1e9-45a0-b537-f90e0b8cfacc]  
-[2018-07-29 17:10:00,095: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[c1ba8870-cb31-4b94-bde7-8a2dd060f660]  
-[2018-07-29 17:10:00,098: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[dd4cad9e-9df0-42f3-a18d-346b22e5d639]  
-[2018-07-29 17:10:00,104: INFO/ForkPoolWorker-1] finished smtp check for team1
-[2018-07-29 17:10:00,113: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[f20b2b7e-0300-4fbf-9306-3a9d892593b0] succeeded in 0.034377514999505365s: None
-[2018-07-29 17:10:00,117: INFO/ForkPoolWorker-2] finished checking ping for team 2
-[2018-07-29 17:10:00,119: INFO/ForkPoolWorker-1] starting ssh check for team 1
-[2018-07-29 17:10:00,129: INFO/ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:10:00,133: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team2[ebf694d5-9ed5-4167-9eb3-9133cbb4229b] succeeded in 0.06437159400047676s: None
-[2018-07-29 17:10:00,141: INFO/ForkPoolWorker-2] starting ssh check for team 2
-[2018-07-29 17:10:00,153: INFO/ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_7.2p2)
-[2018-07-29 17:10:00,175: WARNING/ForkPoolWorker-1] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.1.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
-  key.get_name(), hostname, hexlify(key.get_fingerprint()),
-[2018-07-29 17:10:00,227: INFO/ForkPoolWorker-1] Authentication (password) successful!
-[2018-07-29 17:10:00,249: INFO/ForkPoolWorker-2] Authentication (password) successful!
-[2018-07-29 17:10:00,367: INFO/ForkPoolWorker-1] finished ssh check for team 1
-[2018-07-29 17:10:00,372: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team1[79951e4e-78e6-4b55-909a-57a77944f85a] succeeded in 0.2579341119999299s: None
-[2018-07-29 17:10:00,375: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:10:00,397: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:10:00,401: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[8d240d01-3515-4053-962e-7254a02a0a81] succeeded in 0.027746087000195985s: None
-[2018-07-29 17:10:00,403: INFO/ForkPoolWorker-1] checking ping for team 1
-[2018-07-29 17:10:00,412: WARNING/ForkPoolWorker-2] superadmin
-[2018-07-29 17:10:00,412: INFO/ForkPoolWorker-2] finished ssh check for team 2
-[2018-07-29 17:10:00,417: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team2[55f8c9bc-7ea6-4bed-857c-bdfc4d42fbf4] succeeded in 0.2813298230012151s: None
-[2018-07-29 17:10:00,421: INFO/ForkPoolWorker-2] starting smtp check for team2
-[2018-07-29 17:10:00,430: INFO/ForkPoolWorker-1] finished checking ping for team 1
-[2018-07-29 17:10:00,440: INFO/ForkPoolWorker-2] finished smtp check for team2
-[2018-07-29 17:10:00,441: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team1[7fbdb527-3905-4a06-b873-0efa58ca7d15] succeeded in 0.03800198399949295s: None
-[2018-07-29 17:10:00,446: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team2[7a771862-2cf9-45ca-a8da-dc315dc9c146] succeeded in 0.027673253000102704s: None
-[2018-07-29 17:10:00,448: INFO/ForkPoolWorker-1] starting dns check for team2
-[2018-07-29 17:10:00,450: INFO/ForkPoolWorker-1] finished dns check for team2
-[2018-07-29 17:10:00,451: INFO/ForkPoolWorker-2] starting dns check for team1
-[2018-07-29 17:10:00,454: INFO/ForkPoolWorker-2] finished dns check for team1
-[2018-07-29 17:10:00,455: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[f3631391-b1e9-45a0-b537-f90e0b8cfacc] succeeded in 0.011672190001263516s: None
-[2018-07-29 17:10:00,462: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team1[c1ba8870-cb31-4b94-bde7-8a2dd060f660] succeeded in 0.011854399999720044s: None
-[2018-07-29 17:10:00,466: INFO/ForkPoolWorker-1] starting imap check for team2
-[2018-07-29 17:10:00,491: INFO/ForkPoolWorker-1] finished imap check for team2
-[2018-07-29 17:10:00,499: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team2[dd4cad9e-9df0-42f3-a18d-346b22e5d639] succeeded in 0.04242392100059078s: None
-[2018-07-29 17:20:00,062: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[6523cc75-e8d9-4257-95d1-a05c2c6a0664]  
-[2018-07-29 17:20:00,063: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[17c74ee5-7890-4a41-a8a8-c201c24e34ca]  
-[2018-07-29 17:20:00,068: INFO/ForkPoolWorker-1] starting dns check for team1
-[2018-07-29 17:20:00,068: INFO/ForkPoolWorker-2] starting imap check for team2
-[2018-07-29 17:20:00,071: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[adb47f74-addd-45e4-bf93-1241638ce81f]  
-[2018-07-29 17:20:00,072: INFO/ForkPoolWorker-1] finished dns check for team1
-[2018-07-29 17:20:00,073: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[89aa2a5f-d3ba-4ddd-af35-3f6707ae04cd]  
-[2018-07-29 17:20:00,076: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[e85bf598-7876-4655-a5f5-4f7cbe063d68]  
-[2018-07-29 17:20:00,079: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[b32432fa-eeb1-45b2-ac70-9644f6eedd69]  
-[2018-07-29 17:20:00,080: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[44819f96-eac7-497d-8adf-8c1c86409ffc]  
-[2018-07-29 17:20:00,080: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team1[17c74ee5-7890-4a41-a8a8-c201c24e34ca] succeeded in 0.015516424000452389s: None
-[2018-07-29 17:20:00,082: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[0f0d98ba-3aba-48cf-b965-f7c2e3ec9e4f]  
-[2018-07-29 17:20:00,084: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[915759e8-d124-4eca-a50e-dc10599c76db]  
-[2018-07-29 17:20:00,086: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[bdad8593-2807-4d60-9288-375b2a58cb2f]  
-[2018-07-29 17:20:00,088: INFO/ForkPoolWorker-1] starting dns check for team2
-[2018-07-29 17:20:00,090: INFO/ForkPoolWorker-1] finished dns check for team2
-[2018-07-29 17:20:00,096: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[adb47f74-addd-45e4-bf93-1241638ce81f] succeeded in 0.011335060000419617s: None
-[2018-07-29 17:20:00,101: INFO/ForkPoolWorker-1] starting smtp check for team2
-[2018-07-29 17:20:00,122: INFO/ForkPoolWorker-2] finished imap check for team2
-[2018-07-29 17:20:00,128: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_imap_team2[6523cc75-e8d9-4257-95d1-a05c2c6a0664] succeeded in 0.06406425000022864s: None
-[2018-07-29 17:20:00,130: INFO/ForkPoolWorker-2] checking ping for team 1
-[2018-07-29 17:20:00,154: INFO/ForkPoolWorker-1] finished smtp check for team2
-[2018-07-29 17:20:00,158: INFO/ForkPoolWorker-2] finished checking ping for team 1
-[2018-07-29 17:20:00,160: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team2[89aa2a5f-d3ba-4ddd-af35-3f6707ae04cd] succeeded in 0.06283276199974352s: None
-[2018-07-29 17:20:00,165: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:20:00,185: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team1[e85bf598-7876-4655-a5f5-4f7cbe063d68] succeeded in 0.055350230999465566s: None
-[2018-07-29 17:20:00,192: INFO/ForkPoolWorker-2] starting ssh check for team 2
-[2018-07-29 17:20:00,193: ERROR/ForkPoolWorker-2] team 2 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:20:00,193: INFO/ForkPoolWorker-2] finished ssh check for team 2
-[2018-07-29 17:20:00,198: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team2[44819f96-eac7-497d-8adf-8c1c86409ffc] succeeded in 0.01078214000153821s: None
-[2018-07-29 17:20:00,202: INFO/ForkPoolWorker-2] starting ssh check for team 1
-[2018-07-29 17:20:00,202: ERROR/ForkPoolWorker-2] team 1 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:20:00,202: INFO/ForkPoolWorker-2] finished ssh check for team 1
-[2018-07-29 17:20:00,204: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:20:00,208: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team1[0f0d98ba-3aba-48cf-b965-f7c2e3ec9e4f] succeeded in 0.009345858999949996s: None
-[2018-07-29 17:20:00,211: INFO/ForkPoolWorker-2] starting smtp check for team1
-[2018-07-29 17:20:00,216: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[b32432fa-eeb1-45b2-ac70-9644f6eedd69] succeeded in 0.053356262998931925s: None
-[2018-07-29 17:20:00,219: INFO/ForkPoolWorker-1] checking ping for team 2
-[2018-07-29 17:20:00,244: INFO/ForkPoolWorker-1] finished checking ping for team 2
-[2018-07-29 17:20:00,275: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team2[bdad8593-2807-4d60-9288-375b2a58cb2f] succeeded in 0.05601931699857232s: None
-[2018-07-29 17:20:04,397: INFO/ForkPoolWorker-2] finished smtp check for team1
-[2018-07-29 17:20:04,404: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team1[915759e8-d124-4eca-a50e-dc10599c76db] succeeded in 4.194997042999603s: None
-[2018-07-29 17:27:51,150: DEBUG/MainProcess] | Worker: Preparing bootsteps.
-[2018-07-29 17:27:51,152: DEBUG/MainProcess] | Worker: Building graph...
-[2018-07-29 17:27:51,153: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Timer, Hub, Pool, Autoscaler, Beat, Consumer}
-[2018-07-29 17:27:51,168: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
-[2018-07-29 17:27:51,169: DEBUG/MainProcess] | Consumer: Building graph...
-[2018-07-29 17:27:51,191: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Agent, Events, Mingle, Tasks, Control, Gossip, Heart, event loop}
-[2018-07-29 17:27:51,208: DEBUG/MainProcess] | Worker: Starting Hub
-[2018-07-29 17:27:51,208: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:51,208: DEBUG/MainProcess] | Worker: Starting Pool
-[2018-07-29 17:27:51,325: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:51,326: DEBUG/MainProcess] | Worker: Starting Consumer
-[2018-07-29 17:27:51,327: DEBUG/MainProcess] | Consumer: Starting Connection
-[2018-07-29 17:27:51,342: INFO/MainProcess] Connected to redis://localhost:6379//
-[2018-07-29 17:27:51,343: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:51,343: DEBUG/MainProcess] | Consumer: Starting Events
-[2018-07-29 17:27:51,352: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:51,352: DEBUG/MainProcess] | Consumer: Starting Mingle
-[2018-07-29 17:27:51,353: INFO/MainProcess] mingle: searching for neighbors
-[2018-07-29 17:27:52,378: INFO/MainProcess] mingle: all alone
-[2018-07-29 17:27:52,378: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:52,378: DEBUG/MainProcess] | Consumer: Starting Tasks
-[2018-07-29 17:27:52,384: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:52,384: DEBUG/MainProcess] | Consumer: Starting Control
-[2018-07-29 17:27:52,386: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:52,386: DEBUG/MainProcess] | Consumer: Starting Gossip
-[2018-07-29 17:27:52,389: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:52,389: DEBUG/MainProcess] | Consumer: Starting Heart
-[2018-07-29 17:27:52,390: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:27:52,390: DEBUG/MainProcess] | Consumer: Starting event loop
-[2018-07-29 17:27:52,391: DEBUG/MainProcess] | Worker: Hub.register Pool...
-[2018-07-29 17:27:52,391: INFO/MainProcess] celery@atlantis.team1.irsec ready.
-[2018-07-29 17:27:52,391: DEBUG/MainProcess] basic.qos: prefetch_count->8
-[2018-07-29 17:30:00,097: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[7467c4e0-85db-4e1e-86d8-e468121053d7]  
-[2018-07-29 17:30:00,098: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.ping_job.check_ping_team1', '7467c4e0-85db-4e1e-86d8-e468121053d7', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team1', 'id': '7467c4e0-85db-4e1e-86d8-e468121053d7', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7467c4e0-85db-4e1e-86d8-e468121053d7', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '7467c4e0-85db-4e1e-86d8-e468121053d7', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,100: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[cc928bb5-6e24-46b3-908e-c6ade0fa2177]  
-[2018-07-29 17:30:00,101: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.dns_job.check_dns_team1', 'cc928bb5-6e24-46b3-908e-c6ade0fa2177', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team1', 'id': 'cc928bb5-6e24-46b3-908e-c6ade0fa2177', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cc928bb5-6e24-46b3-908e-c6ade0fa2177', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': 'cc928bb5-6e24-46b3-908e-c6ade0fa2177', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,102: INFO/ForkPoolWorker-2] checking ping for team 1
-[2018-07-29 17:30:00,118: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[57a76458-ffbe-4db0-8f88-9e955347e035]  
-[2018-07-29 17:30:00,119: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team1[7467c4e0-85db-4e1e-86d8-e468121053d7] pid:27580
-[2018-07-29 17:30:00,119: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team1[cc928bb5-6e24-46b3-908e-c6ade0fa2177] pid:27579
-[2018-07-29 17:30:00,121: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[7f365323-dc2b-4f89-81cb-22b31ad68025]  
-[2018-07-29 17:30:00,130: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3]  
-[2018-07-29 17:30:00,131: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[700f80d8-f901-4e49-9f51-64e0f5d5fcf0]  
-[2018-07-29 17:30:00,133: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[3df0a691-d7f8-4d20-b492-93f2e57f3a29]  
-[2018-07-29 17:30:00,134: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[ab6c6f36-c632-4460-84f9-4847fb8bed14]  
-[2018-07-29 17:30:00,135: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[2bc79db4-e7d0-4018-8f13-de8c6db0c50b]  
-[2018-07-29 17:30:00,143: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[b8efc648-aeaa-4489-a2d1-8012ec3689be]  
-[2018-07-29 17:30:00,149: INFO/ForkPoolWorker-1] starting dns check for team1
-[2018-07-29 17:30:00,154: DEBUG/ForkPoolWorker-1] team1 dns result: 10.1.1.20
-[2018-07-29 17:30:00,154: DEBUG/ForkPoolWorker-1] team 1 passed dns
-[2018-07-29 17:30:00,154: INFO/ForkPoolWorker-1] finished dns check for team1
-[2018-07-29 17:30:00,157: DEBUG/ForkPoolWorker-2] team 1 passed ping check
-[2018-07-29 17:30:00,157: INFO/ForkPoolWorker-2] finished checking ping for team 1
-[2018-07-29 17:30:00,162: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team1[cc928bb5-6e24-46b3-908e-c6ade0fa2177] succeeded in 0.05391106599927298s: None
-[2018-07-29 17:30:00,162: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.ssh_job.check_ssh_team2', '57a76458-ffbe-4db0-8f88-9e955347e035', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team2', 'id': '57a76458-ffbe-4db0-8f88-9e955347e035', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '57a76458-ffbe-4db0-8f88-9e955347e035', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '57a76458-ffbe-4db0-8f88-9e955347e035', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,164: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team2[57a76458-ffbe-4db0-8f88-9e955347e035] pid:27579
-[2018-07-29 17:30:00,167: INFO/ForkPoolWorker-1] starting ssh check for team 2
-[2018-07-29 17:30:00,167: ERROR/ForkPoolWorker-1] team 2 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:30:00,167: INFO/ForkPoolWorker-1] finished ssh check for team 2
-[2018-07-29 17:30:00,172: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team1[7467c4e0-85db-4e1e-86d8-e468121053d7] succeeded in 0.07001739500083204s: None
-[2018-07-29 17:30:00,172: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.mail_job.check_smtp_team2', '7f365323-dc2b-4f89-81cb-22b31ad68025', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team2', 'id': '7f365323-dc2b-4f89-81cb-22b31ad68025', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '7f365323-dc2b-4f89-81cb-22b31ad68025', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '7f365323-dc2b-4f89-81cb-22b31ad68025', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,174: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team2[7f365323-dc2b-4f89-81cb-22b31ad68025] pid:27580
-[2018-07-29 17:30:00,177: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team2[57a76458-ffbe-4db0-8f88-9e955347e035] succeeded in 0.013425478000499425s: None
-[2018-07-29 17:30:00,177: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.mail_job.check_imap_team1', '2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team1', 'id': '2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,178: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team1[2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3] pid:27579
-[2018-07-29 17:30:00,179: INFO/ForkPoolWorker-2] starting smtp check for team2
-[2018-07-29 17:30:00,180: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:30:00,192: DEBUG/ForkPoolWorker-1] connection <imaplib.IMAP4 object at 0x7f0a6e21b470>
-[2018-07-29 17:30:00,219: DEBUG/ForkPoolWorker-1] team1 imap result: b813a22be6ea2c0482557f891708c64532bba7b849a0e1e7c62c773fec78ce5f
+[2018-07-29 18:19:10,973: DEBUG/MainProcess] | Worker: Preparing bootsteps.
+[2018-07-29 18:19:10,974: DEBUG/MainProcess] | Worker: Building graph...
+[2018-07-29 18:19:10,975: DEBUG/MainProcess] | Worker: New boot order: {Timer, Hub, Pool, Autoscaler, Beat, StateDB, Consumer}
+[2018-07-29 18:19:10,990: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
+[2018-07-29 18:19:10,990: DEBUG/MainProcess] | Consumer: Building graph...
+[2018-07-29 18:19:11,013: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Gossip, Heart, Tasks, Control, Agent, event loop}
+[2018-07-29 18:19:11,030: DEBUG/MainProcess] | Worker: Starting Hub
+[2018-07-29 18:19:11,030: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:11,031: DEBUG/MainProcess] | Worker: Starting Pool
+[2018-07-29 18:19:11,145: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:11,146: DEBUG/MainProcess] | Worker: Starting Consumer
+[2018-07-29 18:19:11,146: DEBUG/MainProcess] | Consumer: Starting Connection
+[2018-07-29 18:19:11,160: INFO/MainProcess] Connected to redis://localhost:6379//
+[2018-07-29 18:19:11,160: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:11,160: DEBUG/MainProcess] | Consumer: Starting Events
+[2018-07-29 18:19:11,170: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:11,170: DEBUG/MainProcess] | Consumer: Starting Mingle
+[2018-07-29 18:19:11,170: INFO/MainProcess] mingle: searching for neighbors
+[2018-07-29 18:19:12,196: INFO/MainProcess] mingle: all alone
+[2018-07-29 18:19:12,197: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:12,197: DEBUG/MainProcess] | Consumer: Starting Gossip
+[2018-07-29 18:19:12,199: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:12,199: DEBUG/MainProcess] | Consumer: Starting Heart
+[2018-07-29 18:19:12,201: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:12,201: DEBUG/MainProcess] | Consumer: Starting Tasks
+[2018-07-29 18:19:12,207: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:12,207: DEBUG/MainProcess] | Consumer: Starting Control
+[2018-07-29 18:19:12,209: DEBUG/MainProcess] ^-- substep ok
+[2018-07-29 18:19:12,209: DEBUG/MainProcess] | Consumer: Starting event loop
+[2018-07-29 18:19:12,209: DEBUG/MainProcess] | Worker: Hub.register Pool...
+[2018-07-29 18:19:12,210: INFO/MainProcess] celery@atlantis.team1.irsec ready.
+[2018-07-29 18:19:12,210: DEBUG/MainProcess] basic.qos: prefetch_count->8
+[2018-07-29 18:20:00,099: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[371e3a37-38a6-4f41-883f-c8352ec16b75]  
+[2018-07-29 18:20:00,100: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ssh_job.check_ssh_team2', '371e3a37-38a6-4f41-883f-c8352ec16b75', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team2', 'id': '371e3a37-38a6-4f41-883f-c8352ec16b75', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '371e3a37-38a6-4f41-883f-c8352ec16b75', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '371e3a37-38a6-4f41-883f-c8352ec16b75', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,102: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[a753ffe1-29d7-485f-984e-ad3d4b260406]  
+[2018-07-29 18:20:00,103: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_imap_team2', 'a753ffe1-29d7-485f-984e-ad3d4b260406', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team2', 'id': 'a753ffe1-29d7-485f-984e-ad3d4b260406', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a753ffe1-29d7-485f-984e-ad3d4b260406', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'a753ffe1-29d7-485f-984e-ad3d4b260406', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,119: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[fb6c13fd-45e3-4250-a020-4b19813f64f0]  
+[2018-07-29 18:20:00,120: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team2[371e3a37-38a6-4f41-883f-c8352ec16b75] pid:29651
+[2018-07-29 18:20:00,120: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team2[a753ffe1-29d7-485f-984e-ad3d4b260406] pid:29650
+[2018-07-29 18:20:00,126: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[4c48e0c9-fcc9-4949-8555-23af798c19a1]  
+[2018-07-29 18:20:00,131: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[27334b64-6082-4f08-b76f-bf326b0857ff]  
+[2018-07-29 18:20:00,134: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[966e4220-19b6-4561-8aa3-d5127d581bd3]  
+[2018-07-29 18:20:00,139: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[75fd305a-8a79-4089-b203-95e2975d7d5b]  
+[2018-07-29 18:20:00,142: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[d092614b-d862-498e-a048-6d0e164a0d53]  
+[2018-07-29 18:20:00,151: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[07ebe2d8-bdba-44bd-83be-a926ece5d9c4]  
+[2018-07-29 18:20:00,152: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[a280b8e3-e371-4bac-a054-a6a6c33cd224]  
+[2018-07-29 18:20:00,171: INFO/ForkPoolWorker-2] starting ssh check for team 2
+[2018-07-29 18:20:00,171: INFO/ForkPoolWorker-1] starting imap check for team2
+[2018-07-29 18:20:00,185: DEBUG/ForkPoolWorker-1] connection <imaplib.IMAP4 object at 0x7fe3ea5f8198>
+[2018-07-29 18:20:00,211: DEBUG/ForkPoolWorker-1] team2 imap result: f311f615263d48f603f47ad6c86f41cd1742db88e99bbf7b9a6d0e22a1a45a0d
 
-[2018-07-29 17:30:00,219: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:30:00,226: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[2b0ac5fc-f189-4d90-a431-fa1e1ca8a4a3] succeeded in 0.0483485959994141s: None
-[2018-07-29 17:30:00,227: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.mail_job.check_imap_team2', '700f80d8-f901-4e49-9f51-64e0f5d5fcf0', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team2', 'id': '700f80d8-f901-4e49-9f51-64e0f5d5fcf0', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '700f80d8-f901-4e49-9f51-64e0f5d5fcf0', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '700f80d8-f901-4e49-9f51-64e0f5d5fcf0', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,227: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team2[700f80d8-f901-4e49-9f51-64e0f5d5fcf0] pid:27579
-[2018-07-29 17:30:00,231: INFO/ForkPoolWorker-1] starting imap check for team2
-[2018-07-29 17:30:00,247: DEBUG/ForkPoolWorker-1] connection <imaplib.IMAP4 object at 0x7f0a6e14e668>
-[2018-07-29 17:30:00,255: DEBUG/ForkPoolWorker-2] team2 smtp result: ScoringCheck-f086c32281b2f012
-[2018-07-29 17:30:00,256: INFO/ForkPoolWorker-2] finished smtp check for team2
-[2018-07-29 17:30:00,262: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team2[7f365323-dc2b-4f89-81cb-22b31ad68025] succeeded in 0.08801595800105133s: None
-[2018-07-29 17:30:00,262: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.ssh_job.check_ssh_team1', '3df0a691-d7f8-4d20-b492-93f2e57f3a29', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team1', 'id': '3df0a691-d7f8-4d20-b492-93f2e57f3a29', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3df0a691-d7f8-4d20-b492-93f2e57f3a29', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '3df0a691-d7f8-4d20-b492-93f2e57f3a29', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,263: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team1[3df0a691-d7f8-4d20-b492-93f2e57f3a29] pid:27580
-[2018-07-29 17:30:00,267: INFO/ForkPoolWorker-2] starting ssh check for team 1
-[2018-07-29 17:30:00,267: ERROR/ForkPoolWorker-2] team 1 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:30:00,267: INFO/ForkPoolWorker-2] finished ssh check for team 1
-[2018-07-29 17:30:00,272: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team1[3df0a691-d7f8-4d20-b492-93f2e57f3a29] succeeded in 0.008021837998967385s: None
-[2018-07-29 17:30:00,272: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.dns_job.check_dns_team2', 'ab6c6f36-c632-4460-84f9-4847fb8bed14', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team2', 'id': 'ab6c6f36-c632-4460-84f9-4847fb8bed14', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ab6c6f36-c632-4460-84f9-4847fb8bed14', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': 'ab6c6f36-c632-4460-84f9-4847fb8bed14', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,273: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team2[ab6c6f36-c632-4460-84f9-4847fb8bed14] pid:27580
-[2018-07-29 17:30:00,275: INFO/ForkPoolWorker-2] starting dns check for team2
-[2018-07-29 17:30:00,277: DEBUG/ForkPoolWorker-1] team2 imap result: f311f615263d48f603f47ad6c86f41cd1742db88e99bbf7b9a6d0e22a1a45a0d
+[2018-07-29 18:20:00,212: INFO/ForkPoolWorker-1] finished imap check for team2
+[2018-07-29 18:20:00,219: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team2[a753ffe1-29d7-485f-984e-ad3d4b260406] succeeded in 0.11013889400055632s: None
+[2018-07-29 18:20:00,219: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ssh_job.check_ssh_team1', 'fb6c13fd-45e3-4250-a020-4b19813f64f0', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team1', 'id': 'fb6c13fd-45e3-4250-a020-4b19813f64f0', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'fb6c13fd-45e3-4250-a020-4b19813f64f0', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'fb6c13fd-45e3-4250-a020-4b19813f64f0', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,220: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team1[fb6c13fd-45e3-4250-a020-4b19813f64f0] pid:29650
+[2018-07-29 18:20:00,223: INFO/ForkPoolWorker-1] starting ssh check for team 1
+[2018-07-29 18:20:00,225: DEBUG/ForkPoolWorker-2] starting thread (client mode): 0xea5faef0
+[2018-07-29 18:20:00,225: DEBUG/ForkPoolWorker-2] Local version/idstring: SSH-2.0-paramiko_2.4.1
+[2018-07-29 18:20:00,232: DEBUG/ForkPoolWorker-2] Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+[2018-07-29 18:20:00,232: INFO/ForkPoolWorker-2] Connected (version 2.0, client OpenSSH_7.2p2)
+[2018-07-29 18:20:00,233: DEBUG/ForkPoolWorker-2] kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+[2018-07-29 18:20:00,233: DEBUG/ForkPoolWorker-2] Kex agreed: ecdh-sha2-nistp256
+[2018-07-29 18:20:00,233: DEBUG/ForkPoolWorker-2] HostKey agreed: ssh-ed25519
+[2018-07-29 18:20:00,233: DEBUG/ForkPoolWorker-2] Cipher agreed: aes128-ctr
+[2018-07-29 18:20:00,234: DEBUG/ForkPoolWorker-2] MAC agreed: hmac-sha2-256
+[2018-07-29 18:20:00,234: DEBUG/ForkPoolWorker-2] Compression agreed: none
+[2018-07-29 18:20:00,271: DEBUG/ForkPoolWorker-1] starting thread (client mode): 0xea5f86a0
+[2018-07-29 18:20:00,272: DEBUG/ForkPoolWorker-1] Local version/idstring: SSH-2.0-paramiko_2.4.1
+[2018-07-29 18:20:00,275: DEBUG/ForkPoolWorker-2] kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+[2018-07-29 18:20:00,275: DEBUG/ForkPoolWorker-2] Switch to new keys ...
+[2018-07-29 18:20:00,276: WARNING/ForkPoolWorker-2] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.2.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
+  key.get_name(), hostname, hexlify(key.get_fingerprint()),
+[2018-07-29 18:20:00,277: DEBUG/ForkPoolWorker-1] Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+[2018-07-29 18:20:00,277: INFO/ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_7.2p2)
+[2018-07-29 18:20:00,278: DEBUG/ForkPoolWorker-1] kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+[2018-07-29 18:20:00,278: DEBUG/ForkPoolWorker-1] Kex agreed: ecdh-sha2-nistp256
+[2018-07-29 18:20:00,278: DEBUG/ForkPoolWorker-1] HostKey agreed: ssh-ed25519
+[2018-07-29 18:20:00,278: DEBUG/ForkPoolWorker-1] Cipher agreed: aes128-ctr
+[2018-07-29 18:20:00,279: DEBUG/ForkPoolWorker-1] MAC agreed: hmac-sha2-256
+[2018-07-29 18:20:00,279: DEBUG/ForkPoolWorker-1] Compression agreed: none
+[2018-07-29 18:20:00,315: DEBUG/ForkPoolWorker-2] userauth is OK
+[2018-07-29 18:20:00,320: DEBUG/ForkPoolWorker-1] kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+[2018-07-29 18:20:00,320: DEBUG/ForkPoolWorker-1] Switch to new keys ...
+[2018-07-29 18:20:00,321: WARNING/ForkPoolWorker-1] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.1.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
+  key.get_name(), hostname, hexlify(key.get_fingerprint()),
+[2018-07-29 18:20:00,329: INFO/ForkPoolWorker-2] Authentication (password) successful!
+[2018-07-29 18:20:00,329: DEBUG/ForkPoolWorker-2] [chan 0] Max packet in: 32768 bytes
+[2018-07-29 18:20:00,360: DEBUG/ForkPoolWorker-1] userauth is OK
+[2018-07-29 18:20:00,373: INFO/ForkPoolWorker-1] Authentication (password) successful!
+[2018-07-29 18:20:00,373: DEBUG/ForkPoolWorker-1] [chan 0] Max packet in: 32768 bytes
+[2018-07-29 18:20:00,477: DEBUG/ForkPoolWorker-1] Received global request "hostkeys-00@openssh.com"
+[2018-07-29 18:20:00,477: DEBUG/ForkPoolWorker-1] Rejecting "hostkeys-00@openssh.com" global request from server.
+[2018-07-29 18:20:00,514: DEBUG/ForkPoolWorker-1] [chan 0] Max packet out: 32768 bytes
+[2018-07-29 18:20:00,514: DEBUG/ForkPoolWorker-1] Secsh channel 0 opened.
+[2018-07-29 18:20:00,516: DEBUG/ForkPoolWorker-1] [chan 0] Sesch channel 0 request ok
+[2018-07-29 18:20:00,518: DEBUG/ForkPoolWorker-1] [chan 0] EOF received (0)
+[2018-07-29 18:20:00,519: DEBUG/ForkPoolWorker-1] team 1 ssh result: superadmin
 
-[2018-07-29 17:30:00,277: INFO/ForkPoolWorker-1] finished imap check for team2
-[2018-07-29 17:30:00,280: DEBUG/ForkPoolWorker-2] team2 dns result: 10.2.2.20
-[2018-07-29 17:30:00,280: DEBUG/ForkPoolWorker-2] team 2 passed dns
-[2018-07-29 17:30:00,280: INFO/ForkPoolWorker-2] finished dns check for team2
-[2018-07-29 17:30:00,282: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team2[700f80d8-f901-4e49-9f51-64e0f5d5fcf0] succeeded in 0.05486103799921693s: None
-[2018-07-29 17:30:00,283: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.mail_job.check_smtp_team1', '2bc79db4-e7d0-4018-8f13-de8c6db0c50b', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team1', 'id': '2bc79db4-e7d0-4018-8f13-de8c6db0c50b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2bc79db4-e7d0-4018-8f13-de8c6db0c50b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': '2bc79db4-e7d0-4018-8f13-de8c6db0c50b', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,283: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team1[2bc79db4-e7d0-4018-8f13-de8c6db0c50b] pid:27579
-[2018-07-29 17:30:00,285: INFO/ForkPoolWorker-1] starting smtp check for team1
-[2018-07-29 17:30:00,289: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team2[ab6c6f36-c632-4460-84f9-4847fb8bed14] succeeded in 0.015077977999681025s: None
-[2018-07-29 17:30:00,289: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7f0a6e3e32f0> (args:('app.jobs.ping_job.check_ping_team2', 'b8efc648-aeaa-4489-a2d1-8012ec3689be', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team2', 'id': 'b8efc648-aeaa-4489-a2d1-8012ec3689be', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'b8efc648-aeaa-4489-a2d1-8012ec3689be', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27563@atlantis.team1.irsec', 'reply_to': '131e4911-83ac-384b-a5ef-e33fbe04e8d5', 'correlation_id': 'b8efc648-aeaa-4489-a2d1-8012ec3689be', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:30:00,290: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team2[b8efc648-aeaa-4489-a2d1-8012ec3689be] pid:27580
-[2018-07-29 17:30:00,291: INFO/ForkPoolWorker-2] checking ping for team 2
-[2018-07-29 17:30:00,308: DEBUG/ForkPoolWorker-2] team 2 passed ping check
-[2018-07-29 17:30:00,309: INFO/ForkPoolWorker-2] finished checking ping for team 2
-[2018-07-29 17:30:00,317: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team2[b8efc648-aeaa-4489-a2d1-8012ec3689be] succeeded in 0.026976772000125493s: None
-[2018-07-29 17:30:00,342: DEBUG/ForkPoolWorker-1] team1 smtp result: ScoringCheck-59bce5a3bfb26e60
-[2018-07-29 17:30:00,343: INFO/ForkPoolWorker-1] finished smtp check for team1
-[2018-07-29 17:30:00,348: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[2bc79db4-e7d0-4018-8f13-de8c6db0c50b] succeeded in 0.06439363400022557s: None
-[2018-07-29 17:31:23,575: DEBUG/MainProcess] | Worker: Closing Hub...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Worker: Closing Pool...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Worker: Closing Consumer...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Worker: Stopping Consumer...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Consumer: Closing Connection...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Consumer: Closing Events...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Consumer: Closing Mingle...
-[2018-07-29 17:31:23,576: DEBUG/MainProcess] | Consumer: Closing Tasks...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Closing Control...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Closing Gossip...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Closing Heart...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Closing event loop...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Stopping event loop...
-[2018-07-29 17:31:23,577: DEBUG/MainProcess] | Consumer: Stopping Heart...
-[2018-07-29 17:31:23,578: DEBUG/MainProcess] | Consumer: Stopping Gossip...
-[2018-07-29 17:31:23,580: DEBUG/MainProcess] | Consumer: Stopping Control...
-[2018-07-29 17:31:23,581: DEBUG/MainProcess] | Consumer: Stopping Tasks...
-[2018-07-29 17:31:23,581: DEBUG/MainProcess] Canceling task consumer...
-[2018-07-29 17:31:23,581: DEBUG/MainProcess] | Consumer: Stopping Mingle...
-[2018-07-29 17:31:23,582: DEBUG/MainProcess] | Consumer: Stopping Events...
-[2018-07-29 17:31:23,582: DEBUG/MainProcess] | Consumer: Stopping Connection...
-[2018-07-29 17:31:23,582: DEBUG/MainProcess] | Worker: Stopping Pool...
-[2018-07-29 17:31:24,579: DEBUG/MainProcess] | Worker: Stopping Hub...
-[2018-07-29 17:31:24,579: DEBUG/MainProcess] | Consumer: Shutdown Heart...
-[2018-07-29 17:31:24,579: DEBUG/MainProcess] | Consumer: Shutdown Gossip...
-[2018-07-29 17:31:24,579: DEBUG/MainProcess] | Consumer: Shutdown Control...
-[2018-07-29 17:31:24,579: DEBUG/MainProcess] | Consumer: Shutdown Tasks...
-[2018-07-29 17:31:24,580: DEBUG/MainProcess] Canceling task consumer...
-[2018-07-29 17:31:24,580: DEBUG/MainProcess] Closing consumer channel...
-[2018-07-29 17:31:24,580: DEBUG/MainProcess] | Consumer: Shutdown Events...
-[2018-07-29 17:31:24,580: DEBUG/MainProcess] | Consumer: Shutdown Connection...
-[2018-07-29 17:31:24,581: DEBUG/MainProcess] removing tasks from inqueue until task handler finished
-[2018-07-29 17:33:15,887: DEBUG/MainProcess] | Worker: Preparing bootsteps.
-[2018-07-29 17:33:15,889: DEBUG/MainProcess] | Worker: Building graph...
-[2018-07-29 17:33:15,889: DEBUG/MainProcess] | Worker: New boot order: {StateDB, Beat, Timer, Hub, Pool, Autoscaler, Consumer}
-[2018-07-29 17:33:15,905: DEBUG/MainProcess] | Consumer: Preparing bootsteps.
-[2018-07-29 17:33:15,906: DEBUG/MainProcess] | Consumer: Building graph...
-[2018-07-29 17:33:15,927: DEBUG/MainProcess] | Consumer: New boot order: {Connection, Events, Mingle, Tasks, Control, Agent, Heart, Gossip, event loop}
-[2018-07-29 17:33:15,939: DEBUG/MainProcess] | Worker: Starting Hub
-[2018-07-29 17:33:15,939: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:15,939: DEBUG/MainProcess] | Worker: Starting Pool
-[2018-07-29 17:33:16,044: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:16,044: DEBUG/MainProcess] | Worker: Starting Consumer
-[2018-07-29 17:33:16,045: DEBUG/MainProcess] | Consumer: Starting Connection
-[2018-07-29 17:33:16,059: INFO/MainProcess] Connected to redis://localhost:6379//
-[2018-07-29 17:33:16,059: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:16,059: DEBUG/MainProcess] | Consumer: Starting Events
-[2018-07-29 17:33:16,069: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:16,069: DEBUG/MainProcess] | Consumer: Starting Mingle
-[2018-07-29 17:33:16,069: INFO/MainProcess] mingle: searching for neighbors
-[2018-07-29 17:33:17,094: INFO/MainProcess] mingle: all alone
-[2018-07-29 17:33:17,094: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:17,094: DEBUG/MainProcess] | Consumer: Starting Tasks
-[2018-07-29 17:33:17,104: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:17,104: DEBUG/MainProcess] | Consumer: Starting Control
-[2018-07-29 17:33:17,107: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:17,107: DEBUG/MainProcess] | Consumer: Starting Heart
-[2018-07-29 17:33:17,109: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:17,109: DEBUG/MainProcess] | Consumer: Starting Gossip
-[2018-07-29 17:33:17,112: DEBUG/MainProcess] ^-- substep ok
-[2018-07-29 17:33:17,112: DEBUG/MainProcess] | Consumer: Starting event loop
-[2018-07-29 17:33:17,112: DEBUG/MainProcess] | Worker: Hub.register Pool...
-[2018-07-29 17:33:17,113: INFO/MainProcess] celery@atlantis.team1.irsec ready.
-[2018-07-29 17:33:17,113: DEBUG/MainProcess] basic.qos: prefetch_count->8
-[2018-07-29 17:40:00,118: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[9d4106f1-f568-440b-8a22-99b2a3313c3f]  
-[2018-07-29 17:40:00,120: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.ssh_job.check_ssh_team2', '9d4106f1-f568-440b-8a22-99b2a3313c3f', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team2', 'id': '9d4106f1-f568-440b-8a22-99b2a3313c3f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '9d4106f1-f568-440b-8a22-99b2a3313c3f', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '9d4106f1-f568-440b-8a22-99b2a3313c3f', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,121: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[44c418a9-f687-45e1-abcb-f0c15d7a23bb]  
-[2018-07-29 17:40:00,122: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.mail_job.check_imap_team1', '44c418a9-f687-45e1-abcb-f0c15d7a23bb', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team1', 'id': '44c418a9-f687-45e1-abcb-f0c15d7a23bb', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '44c418a9-f687-45e1-abcb-f0c15d7a23bb', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '44c418a9-f687-45e1-abcb-f0c15d7a23bb', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,141: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[fd665963-36c1-4b72-8f1c-5d5c8f5e6472]  
-[2018-07-29 17:40:00,142: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team2[9d4106f1-f568-440b-8a22-99b2a3313c3f] pid:27783
-[2018-07-29 17:40:00,142: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team1[44c418a9-f687-45e1-abcb-f0c15d7a23bb] pid:27782
-[2018-07-29 17:40:00,146: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[ce6a7666-bf86-4c52-9b05-8a423377d53f]  
-[2018-07-29 17:40:00,149: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[0a66dd20-9124-48a1-867f-75544d6dfe99]  
-[2018-07-29 17:40:00,150: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[3592b9bb-388d-466c-b31e-9d020950b4d9]  
-[2018-07-29 17:40:00,157: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[2b5564a5-2ad8-48ac-ac8b-251851762483]  
-[2018-07-29 17:40:00,159: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[aef0cda9-cadf-4600-b2ae-79a8819c96eb]  
-[2018-07-29 17:40:00,160: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd]  
-[2018-07-29 17:40:00,161: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[c873c57c-08f0-4c18-abaa-e412d8894195]  
-[2018-07-29 17:40:00,168: INFO/ForkPoolWorker-2] starting ssh check for team 2
-[2018-07-29 17:40:00,168: ERROR/ForkPoolWorker-2] team 2 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:40:00,169: INFO/ForkPoolWorker-2] finished ssh check for team 2
-[2018-07-29 17:40:00,173: INFO/ForkPoolWorker-1] starting imap check for team1
-[2018-07-29 17:40:00,176: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team2[9d4106f1-f568-440b-8a22-99b2a3313c3f] succeeded in 0.0534715009998763s: None
-[2018-07-29 17:40:00,177: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.ping_job.check_ping_team2', 'fd665963-36c1-4b72-8f1c-5d5c8f5e6472', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team2', 'id': 'fd665963-36c1-4b72-8f1c-5d5c8f5e6472', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'fd665963-36c1-4b72-8f1c-5d5c8f5e6472', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': 'fd665963-36c1-4b72-8f1c-5d5c8f5e6472', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,178: INFO/ForkPoolWorker-2] checking ping for team 2
-[2018-07-29 17:40:00,178: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team2[fd665963-36c1-4b72-8f1c-5d5c8f5e6472] pid:27783
-[2018-07-29 17:40:00,189: DEBUG/ForkPoolWorker-1] connection <imaplib.IMAP4 object at 0x7fee56ad00f0>
-[2018-07-29 17:40:00,198: DEBUG/ForkPoolWorker-2] team 2 passed ping check
-[2018-07-29 17:40:00,199: INFO/ForkPoolWorker-2] finished checking ping for team 2
-[2018-07-29 17:40:00,207: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team2[fd665963-36c1-4b72-8f1c-5d5c8f5e6472] succeeded in 0.02919821799878264s: None
-[2018-07-29 17:40:00,208: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.dns_job.check_dns_team1', 'ce6a7666-bf86-4c52-9b05-8a423377d53f', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team1', 'id': 'ce6a7666-bf86-4c52-9b05-8a423377d53f', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ce6a7666-bf86-4c52-9b05-8a423377d53f', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': 'ce6a7666-bf86-4c52-9b05-8a423377d53f', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,209: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team1[ce6a7666-bf86-4c52-9b05-8a423377d53f] pid:27783
-[2018-07-29 17:40:00,211: INFO/ForkPoolWorker-2] starting dns check for team1
-[2018-07-29 17:40:00,213: DEBUG/ForkPoolWorker-1] team1 imap result: b813a22be6ea2c0482557f891708c64532bba7b849a0e1e7c62c773fec78ce5f
+[2018-07-29 18:20:00,519: INFO/ForkPoolWorker-1] finished ssh check for team 1
+[2018-07-29 18:20:00,524: DEBUG/ForkPoolWorker-2] Received global request "hostkeys-00@openssh.com"
+[2018-07-29 18:20:00,525: DEBUG/ForkPoolWorker-2] Rejecting "hostkeys-00@openssh.com" global request from server.
+[2018-07-29 18:20:00,528: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team1[fb6c13fd-45e3-4250-a020-4b19813f64f0] succeeded in 0.3077646830024605s: None
+[2018-07-29 18:20:00,528: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.dns_job.check_dns_team2', '4c48e0c9-fcc9-4949-8555-23af798c19a1', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team2', 'id': '4c48e0c9-fcc9-4949-8555-23af798c19a1', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '4c48e0c9-fcc9-4949-8555-23af798c19a1', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '4c48e0c9-fcc9-4949-8555-23af798c19a1', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,529: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team2[4c48e0c9-fcc9-4949-8555-23af798c19a1] pid:29650
+[2018-07-29 18:20:00,530: INFO/ForkPoolWorker-1] starting dns check for team2
+[2018-07-29 18:20:00,534: DEBUG/ForkPoolWorker-1] team2 dns result: 10.2.2.20
+[2018-07-29 18:20:00,534: DEBUG/ForkPoolWorker-1] team 2 passed dns
+[2018-07-29 18:20:00,534: INFO/ForkPoolWorker-1] finished dns check for team2
+[2018-07-29 18:20:00,538: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[4c48e0c9-fcc9-4949-8555-23af798c19a1] succeeded in 0.009034238999447552s: None
+[2018-07-29 18:20:00,538: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_smtp_team2', '27334b64-6082-4f08-b76f-bf326b0857ff', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team2', 'id': '27334b64-6082-4f08-b76f-bf326b0857ff', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '27334b64-6082-4f08-b76f-bf326b0857ff', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '27334b64-6082-4f08-b76f-bf326b0857ff', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,539: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team2[27334b64-6082-4f08-b76f-bf326b0857ff] pid:29650
+[2018-07-29 18:20:00,541: INFO/ForkPoolWorker-1] starting smtp check for team2
+[2018-07-29 18:20:00,562: DEBUG/ForkPoolWorker-2] [chan 0] Max packet out: 32768 bytes
+[2018-07-29 18:20:00,562: DEBUG/ForkPoolWorker-2] Secsh channel 0 opened.
+[2018-07-29 18:20:00,564: DEBUG/ForkPoolWorker-2] [chan 0] Sesch channel 0 request ok
+[2018-07-29 18:20:00,570: DEBUG/ForkPoolWorker-2] [chan 0] EOF received (0)
+[2018-07-29 18:20:00,571: DEBUG/ForkPoolWorker-2] [chan 0] EOF sent (0)
+[2018-07-29 18:20:00,571: WARNING/ForkPoolWorker-2] superadmin
+[2018-07-29 18:20:00,571: DEBUG/ForkPoolWorker-2] team 2 ssh result: superadmin
 
-[2018-07-29 17:40:00,213: INFO/ForkPoolWorker-1] finished imap check for team1
-[2018-07-29 17:40:00,216: DEBUG/ForkPoolWorker-2] team1 dns result: 10.1.1.20
-[2018-07-29 17:40:00,216: DEBUG/ForkPoolWorker-2] team 1 passed dns
-[2018-07-29 17:40:00,216: INFO/ForkPoolWorker-2] finished dns check for team1
-[2018-07-29 17:40:00,221: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team1[44c418a9-f687-45e1-abcb-f0c15d7a23bb] succeeded in 0.09152710899979866s: None
-[2018-07-29 17:40:00,222: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.ping_job.check_ping_team1', '0a66dd20-9124-48a1-867f-75544d6dfe99', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team1', 'id': '0a66dd20-9124-48a1-867f-75544d6dfe99', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '0a66dd20-9124-48a1-867f-75544d6dfe99', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '0a66dd20-9124-48a1-867f-75544d6dfe99', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,223: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team1[0a66dd20-9124-48a1-867f-75544d6dfe99] pid:27782
-[2018-07-29 17:40:00,223: INFO/ForkPoolWorker-1] checking ping for team 1
-[2018-07-29 17:40:00,226: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team1[ce6a7666-bf86-4c52-9b05-8a423377d53f] succeeded in 0.016817783000078634s: None
-[2018-07-29 17:40:00,226: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.ssh_job.check_ssh_team1', '3592b9bb-388d-466c-b31e-9d020950b4d9', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team1', 'id': '3592b9bb-388d-466c-b31e-9d020950b4d9', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3592b9bb-388d-466c-b31e-9d020950b4d9', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '3592b9bb-388d-466c-b31e-9d020950b4d9', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,227: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team1[3592b9bb-388d-466c-b31e-9d020950b4d9] pid:27783
-[2018-07-29 17:40:00,230: INFO/ForkPoolWorker-2] starting ssh check for team 1
-[2018-07-29 17:40:00,230: ERROR/ForkPoolWorker-2] team 1 ssh failed with 'NoneType' object has no attribute 'password'
-[2018-07-29 17:40:00,230: INFO/ForkPoolWorker-2] finished ssh check for team 1
-[2018-07-29 17:40:00,235: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team1[3592b9bb-388d-466c-b31e-9d020950b4d9] succeeded in 0.0073939080011768965s: None
-[2018-07-29 17:40:00,235: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.mail_job.check_imap_team2', '2b5564a5-2ad8-48ac-ac8b-251851762483', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team2', 'id': '2b5564a5-2ad8-48ac-ac8b-251851762483', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '2b5564a5-2ad8-48ac-ac8b-251851762483', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '2b5564a5-2ad8-48ac-ac8b-251851762483', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,237: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team2[2b5564a5-2ad8-48ac-ac8b-251851762483] pid:27783
-[2018-07-29 17:40:00,239: INFO/ForkPoolWorker-2] starting imap check for team2
-[2018-07-29 17:40:00,243: DEBUG/ForkPoolWorker-1] team 1 passed ping check
-[2018-07-29 17:40:00,244: INFO/ForkPoolWorker-1] finished checking ping for team 1
-[2018-07-29 17:40:00,253: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team1[0a66dd20-9124-48a1-867f-75544d6dfe99] succeeded in 0.029551333998824703s: None
-[2018-07-29 17:40:00,253: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.mail_job.check_smtp_team2', 'aef0cda9-cadf-4600-b2ae-79a8819c96eb', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team2', 'id': 'aef0cda9-cadf-4600-b2ae-79a8819c96eb', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'aef0cda9-cadf-4600-b2ae-79a8819c96eb', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': 'aef0cda9-cadf-4600-b2ae-79a8819c96eb', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,254: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team2[aef0cda9-cadf-4600-b2ae-79a8819c96eb] pid:27782
-[2018-07-29 17:40:00,256: INFO/ForkPoolWorker-1] starting smtp check for team2
-[2018-07-29 17:40:00,256: DEBUG/ForkPoolWorker-2] connection <imaplib.IMAP4 object at 0x7fee56b68a58>
-[2018-07-29 17:40:00,307: DEBUG/ForkPoolWorker-2] team2 imap result: f311f615263d48f603f47ad6c86f41cd1742db88e99bbf7b9a6d0e22a1a45a0d
+[2018-07-29 18:20:00,571: INFO/ForkPoolWorker-2] finished ssh check for team 2
+[2018-07-29 18:20:00,581: INFO/ForkPoolWorker-2] Task app.jobs.ssh_job.check_ssh_team2[371e3a37-38a6-4f41-883f-c8352ec16b75] succeeded in 0.47689408699807245s: None
+[2018-07-29 18:20:00,581: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_imap_team1', '966e4220-19b6-4561-8aa3-d5127d581bd3', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team1', 'id': '966e4220-19b6-4561-8aa3-d5127d581bd3', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '966e4220-19b6-4561-8aa3-d5127d581bd3', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '966e4220-19b6-4561-8aa3-d5127d581bd3', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,582: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team1[966e4220-19b6-4561-8aa3-d5127d581bd3] pid:29651
+[2018-07-29 18:20:00,585: INFO/ForkPoolWorker-2] starting imap check for team1
+[2018-07-29 18:20:00,593: DEBUG/ForkPoolWorker-1] team2 smtp result: ScoringCheck-00073d2b709cbe06
+[2018-07-29 18:20:00,593: INFO/ForkPoolWorker-1] finished smtp check for team2
+[2018-07-29 18:20:00,596: DEBUG/ForkPoolWorker-2] connection <imaplib.IMAP4 object at 0x7fe3edb377b8>
+[2018-07-29 18:20:00,599: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team2[27334b64-6082-4f08-b76f-bf326b0857ff] succeeded in 0.060340657000779174s: None
+[2018-07-29 18:20:00,600: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ping_job.check_ping_team2', '75fd305a-8a79-4089-b203-95e2975d7d5b', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team2', 'id': '75fd305a-8a79-4089-b203-95e2975d7d5b', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '75fd305a-8a79-4089-b203-95e2975d7d5b', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '75fd305a-8a79-4089-b203-95e2975d7d5b', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,600: INFO/ForkPoolWorker-1] checking ping for team 2
+[2018-07-29 18:20:00,600: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team2[75fd305a-8a79-4089-b203-95e2975d7d5b] pid:29650
+[2018-07-29 18:20:00,617: DEBUG/ForkPoolWorker-1] team 2 passed ping check
+[2018-07-29 18:20:00,617: INFO/ForkPoolWorker-1] finished checking ping for team 2
+[2018-07-29 18:20:00,619: DEBUG/ForkPoolWorker-2] team1 imap result: b813a22be6ea2c0482557f891708c64532bba7b849a0e1e7c62c773fec78ce5f
 
-[2018-07-29 17:40:00,307: INFO/ForkPoolWorker-2] finished imap check for team2
-[2018-07-29 17:40:00,312: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_imap_team2[2b5564a5-2ad8-48ac-ac8b-251851762483] succeeded in 0.07567789399945468s: None
-[2018-07-29 17:40:00,312: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.mail_job.check_smtp_team1', '695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team1', 'id': '695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': '695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,313: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team1[695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd] pid:27783
-[2018-07-29 17:40:00,315: INFO/ForkPoolWorker-2] starting smtp check for team1
-[2018-07-29 17:40:00,319: DEBUG/ForkPoolWorker-1] team2 smtp result: ScoringCheck-49c508f5e9ef9c3c
-[2018-07-29 17:40:00,320: INFO/ForkPoolWorker-1] finished smtp check for team2
-[2018-07-29 17:40:00,324: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team2[aef0cda9-cadf-4600-b2ae-79a8819c96eb] succeeded in 0.07028478800020821s: None
-[2018-07-29 17:40:00,325: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fee56e002f0> (args:('app.jobs.dns_job.check_dns_team2', 'c873c57c-08f0-4c18-abaa-e412d8894195', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team2', 'id': 'c873c57c-08f0-4c18-abaa-e412d8894195', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'c873c57c-08f0-4c18-abaa-e412d8894195', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen27766@atlantis.team1.irsec', 'reply_to': '10fdce55-0bd9-37e4-805d-653e4386eb3e', 'correlation_id': 'c873c57c-08f0-4c18-abaa-e412d8894195', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
-[2018-07-29 17:40:00,326: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team2[c873c57c-08f0-4c18-abaa-e412d8894195] pid:27782
-[2018-07-29 17:40:00,327: INFO/ForkPoolWorker-1] starting dns check for team2
-[2018-07-29 17:40:00,331: DEBUG/ForkPoolWorker-1] team2 dns result: 10.2.2.20
-[2018-07-29 17:40:00,331: DEBUG/ForkPoolWorker-1] team 2 passed dns
-[2018-07-29 17:40:00,331: INFO/ForkPoolWorker-1] finished dns check for team2
-[2018-07-29 17:40:00,335: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[c873c57c-08f0-4c18-abaa-e412d8894195] succeeded in 0.010033535998445586s: None
-[2018-07-29 17:40:00,390: DEBUG/ForkPoolWorker-2] team1 smtp result: ScoringCheck-cdb8e0a936170450
-[2018-07-29 17:40:00,390: INFO/ForkPoolWorker-2] finished smtp check for team1
-[2018-07-29 17:40:00,395: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team1[695f8d5f-fb09-4fb2-86a3-8f80f5bcc0fd] succeeded in 0.08093948300120246s: None
+[2018-07-29 18:20:00,619: INFO/ForkPoolWorker-2] finished imap check for team1
+[2018-07-29 18:20:00,624: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_imap_team1[966e4220-19b6-4561-8aa3-d5127d581bd3] succeeded in 0.041173828998580575s: None
+[2018-07-29 18:20:00,624: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ping_job.check_ping_team1', 'd092614b-d862-498e-a048-6d0e164a0d53', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team1', 'id': 'd092614b-d862-498e-a048-6d0e164a0d53', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'd092614b-d862-498e-a048-6d0e164a0d53', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'd092614b-d862-498e-a048-6d0e164a0d53', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,625: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team1[d092614b-d862-498e-a048-6d0e164a0d53] pid:29651
+[2018-07-29 18:20:00,626: INFO/ForkPoolWorker-2] checking ping for team 1
+[2018-07-29 18:20:00,630: INFO/ForkPoolWorker-1] Task app.jobs.ping_job.check_ping_team2[75fd305a-8a79-4089-b203-95e2975d7d5b] succeeded in 0.030130913997709285s: None
+[2018-07-29 18:20:00,633: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_smtp_team1', '07ebe2d8-bdba-44bd-83be-a926ece5d9c4', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team1', 'id': '07ebe2d8-bdba-44bd-83be-a926ece5d9c4', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '07ebe2d8-bdba-44bd-83be-a926ece5d9c4', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '07ebe2d8-bdba-44bd-83be-a926ece5d9c4', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,634: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team1[07ebe2d8-bdba-44bd-83be-a926ece5d9c4] pid:29650
+[2018-07-29 18:20:00,638: INFO/ForkPoolWorker-1] starting smtp check for team1
+[2018-07-29 18:20:00,638: DEBUG/ForkPoolWorker-2] EOF in transport thread
+[2018-07-29 18:20:00,652: DEBUG/ForkPoolWorker-2] team 1 passed ping check
+[2018-07-29 18:20:00,653: INFO/ForkPoolWorker-2] finished checking ping for team 1
+[2018-07-29 18:20:00,662: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team1[d092614b-d862-498e-a048-6d0e164a0d53] succeeded in 0.03606171000137692s: None
+[2018-07-29 18:20:00,663: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.dns_job.check_dns_team1', 'a280b8e3-e371-4bac-a054-a6a6c33cd224', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team1', 'id': 'a280b8e3-e371-4bac-a054-a6a6c33cd224', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'a280b8e3-e371-4bac-a054-a6a6c33cd224', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'a280b8e3-e371-4bac-a054-a6a6c33cd224', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:20:00,663: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team1[a280b8e3-e371-4bac-a054-a6a6c33cd224] pid:29651
+[2018-07-29 18:20:00,666: INFO/ForkPoolWorker-2] starting dns check for team1
+[2018-07-29 18:20:00,670: DEBUG/ForkPoolWorker-2] team1 dns result: 10.1.1.20
+[2018-07-29 18:20:00,670: DEBUG/ForkPoolWorker-2] team 1 passed dns
+[2018-07-29 18:20:00,670: INFO/ForkPoolWorker-2] finished dns check for team1
+[2018-07-29 18:20:00,675: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team1[a280b8e3-e371-4bac-a054-a6a6c33cd224] succeeded in 0.011120368999399943s: None
+[2018-07-29 18:20:03,691: DEBUG/ForkPoolWorker-1] team1 smtp result: ScoringCheck-e94b7595370fcc05
+[2018-07-29 18:20:03,691: INFO/ForkPoolWorker-1] finished smtp check for team1
+[2018-07-29 18:20:03,697: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[07ebe2d8-bdba-44bd-83be-a926ece5d9c4] succeeded in 3.0631486929996754s: None
+[2018-07-29 18:30:00,056: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team1[e1df9b7d-5808-4bba-9696-c59e1764a94d]  
+[2018-07-29 18:30:00,056: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.dns_job.check_dns_team1', 'e1df9b7d-5808-4bba-9696-c59e1764a94d', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team1', 'id': 'e1df9b7d-5808-4bba-9696-c59e1764a94d', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'e1df9b7d-5808-4bba-9696-c59e1764a94d', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'e1df9b7d-5808-4bba-9696-c59e1764a94d', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,057: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team1[3eece68a-9d57-4089-b74f-bd3c746fcd09]  
+[2018-07-29 18:30:00,057: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_smtp_team1', '3eece68a-9d57-4089-b74f-bd3c746fcd09', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team1', 'id': '3eece68a-9d57-4089-b74f-bd3c746fcd09', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '3eece68a-9d57-4089-b74f-bd3c746fcd09', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '3eece68a-9d57-4089-b74f-bd3c746fcd09', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,058: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team1[4df01de5-c306-4674-bfdc-fa0811b465c5]  
+[2018-07-29 18:30:00,059: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team1[e1df9b7d-5808-4bba-9696-c59e1764a94d] pid:29651
+[2018-07-29 18:30:00,061: INFO/ForkPoolWorker-2] starting dns check for team1
+[2018-07-29 18:30:00,062: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team1[3eece68a-9d57-4089-b74f-bd3c746fcd09] pid:29650
+[2018-07-29 18:30:00,063: DEBUG/ForkPoolWorker-2] team1 dns result: 10.1.1.20
+[2018-07-29 18:30:00,063: DEBUG/ForkPoolWorker-2] team 1 passed dns
+[2018-07-29 18:30:00,063: INFO/ForkPoolWorker-2] finished dns check for team1
+[2018-07-29 18:30:00,063: INFO/ForkPoolWorker-1] starting smtp check for team1
+[2018-07-29 18:30:00,066: INFO/MainProcess] Received task: app.jobs.ping_job.check_ping_team2[1657cd62-bd21-4a1b-8ae6-8853415abd1e]  
+[2018-07-29 18:30:00,068: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team1[6ca0e158-23c3-4373-a721-1fa5dc0a41ae]  
+[2018-07-29 18:30:00,069: INFO/MainProcess] Received task: app.jobs.mail_job.check_smtp_team2[10964590-32da-4e58-aa30-b2db6ec766a2]  
+[2018-07-29 18:30:00,070: INFO/MainProcess] Received task: app.jobs.dns_job.check_dns_team2[cc0b1db4-eb86-4a69-a59a-d39ca6f38418]  
+[2018-07-29 18:30:00,071: INFO/ForkPoolWorker-2] Task app.jobs.dns_job.check_dns_team1[e1df9b7d-5808-4bba-9696-c59e1764a94d] succeeded in 0.01287769299960928s: None
+[2018-07-29 18:30:00,072: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team1[ef50eba3-18ed-4371-a5ff-10a1fdd3c34c]  
+[2018-07-29 18:30:00,072: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ping_job.check_ping_team1', '4df01de5-c306-4674-bfdc-fa0811b465c5', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team1', 'id': '4df01de5-c306-4674-bfdc-fa0811b465c5', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '4df01de5-c306-4674-bfdc-fa0811b465c5', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '4df01de5-c306-4674-bfdc-fa0811b465c5', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,073: INFO/MainProcess] Received task: app.jobs.mail_job.check_imap_team2[e6db1347-0dd4-443e-90e0-e24f2e70f4e9]  
+[2018-07-29 18:30:00,073: INFO/ForkPoolWorker-2] checking ping for team 1
+[2018-07-29 18:30:00,075: INFO/MainProcess] Received task: app.jobs.ssh_job.check_ssh_team2[f163a2f3-c3c4-4c75-9630-53a1a372ae09]  
+[2018-07-29 18:30:00,075: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team1[4df01de5-c306-4674-bfdc-fa0811b465c5] pid:29651
+[2018-07-29 18:30:00,093: DEBUG/ForkPoolWorker-2] team 1 passed ping check
+[2018-07-29 18:30:00,093: INFO/ForkPoolWorker-2] finished checking ping for team 1
+[2018-07-29 18:30:00,102: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team1[4df01de5-c306-4674-bfdc-fa0811b465c5] succeeded in 0.02897411599769839s: None
+[2018-07-29 18:30:00,103: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ping_job.check_ping_team2', '1657cd62-bd21-4a1b-8ae6-8853415abd1e', {'lang': 'py', 'task': 'app.jobs.ping_job.check_ping_team2', 'id': '1657cd62-bd21-4a1b-8ae6-8853415abd1e', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '1657cd62-bd21-4a1b-8ae6-8853415abd1e', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '1657cd62-bd21-4a1b-8ae6-8853415abd1e', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,104: DEBUG/MainProcess] Task accepted: app.jobs.ping_job.check_ping_team2[1657cd62-bd21-4a1b-8ae6-8853415abd1e] pid:29651
+[2018-07-29 18:30:00,104: INFO/ForkPoolWorker-2] checking ping for team 2
+[2018-07-29 18:30:00,124: DEBUG/ForkPoolWorker-2] team 2 passed ping check
+[2018-07-29 18:30:00,125: INFO/ForkPoolWorker-2] finished checking ping for team 2
+[2018-07-29 18:30:00,133: INFO/ForkPoolWorker-2] Task app.jobs.ping_job.check_ping_team2[1657cd62-bd21-4a1b-8ae6-8853415abd1e] succeeded in 0.029330771998502314s: None
+[2018-07-29 18:30:00,134: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_imap_team1', '6ca0e158-23c3-4373-a721-1fa5dc0a41ae', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team1', 'id': '6ca0e158-23c3-4373-a721-1fa5dc0a41ae', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '6ca0e158-23c3-4373-a721-1fa5dc0a41ae', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '6ca0e158-23c3-4373-a721-1fa5dc0a41ae', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,135: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team1[6ca0e158-23c3-4373-a721-1fa5dc0a41ae] pid:29651
+[2018-07-29 18:30:00,138: INFO/ForkPoolWorker-2] starting imap check for team1
+[2018-07-29 18:30:00,144: DEBUG/ForkPoolWorker-2] connection <imaplib.IMAP4 object at 0x7fe3e9f899b0>
+[2018-07-29 18:30:00,171: DEBUG/ForkPoolWorker-2] team1 imap result: b813a22be6ea2c0482557f891708c64532bba7b849a0e1e7c62c773fec78ce5f
+
+[2018-07-29 18:30:00,171: INFO/ForkPoolWorker-2] finished imap check for team1
+[2018-07-29 18:30:00,176: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_imap_team1[6ca0e158-23c3-4373-a721-1fa5dc0a41ae] succeeded in 0.04137280400027521s: None
+[2018-07-29 18:30:00,177: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_smtp_team2', '10964590-32da-4e58-aa30-b2db6ec766a2', {'lang': 'py', 'task': 'app.jobs.mail_job.check_smtp_team2', 'id': '10964590-32da-4e58-aa30-b2db6ec766a2', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': '10964590-32da-4e58-aa30-b2db6ec766a2', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': '10964590-32da-4e58-aa30-b2db6ec766a2', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,178: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_smtp_team2[10964590-32da-4e58-aa30-b2db6ec766a2] pid:29651
+[2018-07-29 18:30:00,180: INFO/ForkPoolWorker-2] starting smtp check for team2
+[2018-07-29 18:30:00,184: DEBUG/ForkPoolWorker-1] team1 smtp result: ScoringCheck-20369b1c5f5d25f9
+[2018-07-29 18:30:00,184: INFO/ForkPoolWorker-1] finished smtp check for team1
+[2018-07-29 18:30:00,189: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_smtp_team1[3eece68a-9d57-4089-b74f-bd3c746fcd09] succeeded in 0.12952444999973522s: None
+[2018-07-29 18:30:00,190: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.dns_job.check_dns_team2', 'cc0b1db4-eb86-4a69-a59a-d39ca6f38418', {'lang': 'py', 'task': 'app.jobs.dns_job.check_dns_team2', 'id': 'cc0b1db4-eb86-4a69-a59a-d39ca6f38418', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'cc0b1db4-eb86-4a69-a59a-d39ca6f38418', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'cc0b1db4-eb86-4a69-a59a-d39ca6f38418', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,193: INFO/ForkPoolWorker-1] starting dns check for team2
+[2018-07-29 18:30:00,194: DEBUG/MainProcess] Task accepted: app.jobs.dns_job.check_dns_team2[cc0b1db4-eb86-4a69-a59a-d39ca6f38418] pid:29650
+[2018-07-29 18:30:00,195: DEBUG/ForkPoolWorker-1] team2 dns result: 10.2.2.20
+[2018-07-29 18:30:00,196: DEBUG/ForkPoolWorker-1] team 2 passed dns
+[2018-07-29 18:30:00,196: INFO/ForkPoolWorker-1] finished dns check for team2
+[2018-07-29 18:30:00,201: INFO/ForkPoolWorker-1] Task app.jobs.dns_job.check_dns_team2[cc0b1db4-eb86-4a69-a59a-d39ca6f38418] succeeded in 0.009605260998796439s: None
+[2018-07-29 18:30:00,201: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ssh_job.check_ssh_team1', 'ef50eba3-18ed-4371-a5ff-10a1fdd3c34c', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team1', 'id': 'ef50eba3-18ed-4371-a5ff-10a1fdd3c34c', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'ef50eba3-18ed-4371-a5ff-10a1fdd3c34c', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'ef50eba3-18ed-4371-a5ff-10a1fdd3c34c', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,202: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team1[ef50eba3-18ed-4371-a5ff-10a1fdd3c34c] pid:29650
+[2018-07-29 18:30:00,204: INFO/ForkPoolWorker-1] starting ssh check for team 1
+[2018-07-29 18:30:00,208: DEBUG/ForkPoolWorker-1] starting thread (client mode): 0xe9f85748
+[2018-07-29 18:30:00,208: DEBUG/ForkPoolWorker-1] Local version/idstring: SSH-2.0-paramiko_2.4.1
+[2018-07-29 18:30:00,213: DEBUG/ForkPoolWorker-1] Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+[2018-07-29 18:30:00,214: INFO/ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_7.2p2)
+[2018-07-29 18:30:00,214: DEBUG/ForkPoolWorker-1] kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+[2018-07-29 18:30:00,214: DEBUG/ForkPoolWorker-1] Kex agreed: ecdh-sha2-nistp256
+[2018-07-29 18:30:00,215: DEBUG/ForkPoolWorker-1] HostKey agreed: ssh-ed25519
+[2018-07-29 18:30:00,215: DEBUG/ForkPoolWorker-1] Cipher agreed: aes128-ctr
+[2018-07-29 18:30:00,215: DEBUG/ForkPoolWorker-1] MAC agreed: hmac-sha2-256
+[2018-07-29 18:30:00,215: DEBUG/ForkPoolWorker-1] Compression agreed: none
+[2018-07-29 18:30:00,257: DEBUG/ForkPoolWorker-1] kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+[2018-07-29 18:30:00,257: DEBUG/ForkPoolWorker-1] Switch to new keys ...
+[2018-07-29 18:30:00,297: DEBUG/ForkPoolWorker-1] userauth is OK
+[2018-07-29 18:30:00,309: INFO/ForkPoolWorker-1] Authentication (password) successful!
+[2018-07-29 18:30:00,309: DEBUG/ForkPoolWorker-1] [chan 0] Max packet in: 32768 bytes
+[2018-07-29 18:30:00,419: DEBUG/ForkPoolWorker-1] Received global request "hostkeys-00@openssh.com"
+[2018-07-29 18:30:00,419: DEBUG/ForkPoolWorker-1] Rejecting "hostkeys-00@openssh.com" global request from server.
+[2018-07-29 18:30:00,459: DEBUG/ForkPoolWorker-1] [chan 0] Max packet out: 32768 bytes
+[2018-07-29 18:30:00,459: DEBUG/ForkPoolWorker-1] Secsh channel 0 opened.
+[2018-07-29 18:30:00,460: DEBUG/ForkPoolWorker-1] [chan 0] Sesch channel 0 request ok
+[2018-07-29 18:30:00,463: DEBUG/ForkPoolWorker-1] [chan 0] EOF received (0)
+[2018-07-29 18:30:00,464: DEBUG/ForkPoolWorker-1] team 1 ssh result: superadmin
+
+[2018-07-29 18:30:00,464: INFO/ForkPoolWorker-1] finished ssh check for team 1
+[2018-07-29 18:30:00,470: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team1[ef50eba3-18ed-4371-a5ff-10a1fdd3c34c] succeeded in 0.26847010499841417s: None
+[2018-07-29 18:30:00,470: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.mail_job.check_imap_team2', 'e6db1347-0dd4-443e-90e0-e24f2e70f4e9', {'lang': 'py', 'task': 'app.jobs.mail_job.check_imap_team2', 'id': 'e6db1347-0dd4-443e-90e0-e24f2e70f4e9', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'e6db1347-0dd4-443e-90e0-e24f2e70f4e9', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'e6db1347-0dd4-443e-90e0-e24f2e70f4e9', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,471: DEBUG/MainProcess] Task accepted: app.jobs.mail_job.check_imap_team2[e6db1347-0dd4-443e-90e0-e24f2e70f4e9] pid:29650
+[2018-07-29 18:30:00,473: INFO/ForkPoolWorker-1] starting imap check for team2
+[2018-07-29 18:30:00,484: DEBUG/ForkPoolWorker-1] connection <imaplib.IMAP4 object at 0x7fe3e9f85cc0>
+[2018-07-29 18:30:00,521: DEBUG/ForkPoolWorker-1] team2 imap result: f311f615263d48f603f47ad6c86f41cd1742db88e99bbf7b9a6d0e22a1a45a0d
+
+[2018-07-29 18:30:00,521: INFO/ForkPoolWorker-1] finished imap check for team2
+[2018-07-29 18:30:00,527: INFO/ForkPoolWorker-1] Task app.jobs.mail_job.check_imap_team2[e6db1347-0dd4-443e-90e0-e24f2e70f4e9] succeeded in 0.055609560000448255s: None
+[2018-07-29 18:30:00,527: DEBUG/MainProcess] TaskPool: Apply <function _fast_trace_task at 0x7fe3ea931378> (args:('app.jobs.ssh_job.check_ssh_team2', 'f163a2f3-c3c4-4c75-9630-53a1a372ae09', {'lang': 'py', 'task': 'app.jobs.ssh_job.check_ssh_team2', 'id': 'f163a2f3-c3c4-4c75-9630-53a1a372ae09', 'shadow': None, 'eta': None, 'expires': None, 'group': None, 'retries': 0, 'timelimit': [None, None], 'root_id': 'f163a2f3-c3c4-4c75-9630-53a1a372ae09', 'parent_id': None, 'argsrepr': '()', 'kwargsrepr': '{}', 'origin': 'gen29627@atlantis.team1.irsec', 'reply_to': '62763abf-5a8b-3df3-abb7-377d615cdf2d', 'correlation_id': 'f163a2f3-c3c4-4c75-9630-53a1a372ae09', 'delivery_info': {'exchange': '', 'routing_key': 'celery', 'priority': 0, 'redelivered': None}}, b'[[], {}, {"callbacks": null, "errbacks": null, "chain": null, "chord": null}]', 'application/json', 'utf-8') kwargs:{})
+[2018-07-29 18:30:00,528: DEBUG/MainProcess] Task accepted: app.jobs.ssh_job.check_ssh_team2[f163a2f3-c3c4-4c75-9630-53a1a372ae09] pid:29650
+[2018-07-29 18:30:00,530: INFO/ForkPoolWorker-1] starting ssh check for team 2
+[2018-07-29 18:30:00,532: DEBUG/ForkPoolWorker-1] starting thread (client mode): 0xea6b35c0
+[2018-07-29 18:30:00,533: DEBUG/ForkPoolWorker-1] Local version/idstring: SSH-2.0-paramiko_2.4.1
+[2018-07-29 18:30:00,540: DEBUG/ForkPoolWorker-1] Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.4
+[2018-07-29 18:30:00,540: INFO/ForkPoolWorker-1] Connected (version 2.0, client OpenSSH_7.2p2)
+[2018-07-29 18:30:00,541: DEBUG/ForkPoolWorker-1] kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+[2018-07-29 18:30:00,541: DEBUG/ForkPoolWorker-1] Kex agreed: ecdh-sha2-nistp256
+[2018-07-29 18:30:00,541: DEBUG/ForkPoolWorker-1] HostKey agreed: ssh-ed25519
+[2018-07-29 18:30:00,541: DEBUG/ForkPoolWorker-1] Cipher agreed: aes128-ctr
+[2018-07-29 18:30:00,541: DEBUG/ForkPoolWorker-1] MAC agreed: hmac-sha2-256
+[2018-07-29 18:30:00,542: DEBUG/ForkPoolWorker-1] Compression agreed: none
+[2018-07-29 18:30:00,546: DEBUG/ForkPoolWorker-1] kex engine KexNistp256 specified hash_algo <built-in function openssl_sha256>
+[2018-07-29 18:30:00,547: DEBUG/ForkPoolWorker-1] Switch to new keys ...
+[2018-07-29 18:30:00,547: WARNING/ForkPoolWorker-1] /home/superadmin/.local/lib/python3.6/site-packages/paramiko/client.py:779: UserWarning: Unknown ssh-ed25519 host key for [10.120.2.13]:22: b'5b62a13672d587c37f93a88f96c1520b'
+  key.get_name(), hostname, hexlify(key.get_fingerprint()),
+[2018-07-29 18:30:00,587: DEBUG/ForkPoolWorker-1] userauth is OK
+[2018-07-29 18:30:00,602: INFO/ForkPoolWorker-1] Authentication (password) successful!
+[2018-07-29 18:30:00,602: DEBUG/ForkPoolWorker-1] [chan 0] Max packet in: 32768 bytes
+[2018-07-29 18:30:00,787: DEBUG/ForkPoolWorker-1] Received global request "hostkeys-00@openssh.com"
+[2018-07-29 18:30:00,787: DEBUG/ForkPoolWorker-1] Rejecting "hostkeys-00@openssh.com" global request from server.
+[2018-07-29 18:30:00,826: DEBUG/ForkPoolWorker-1] [chan 0] Max packet out: 32768 bytes
+[2018-07-29 18:30:00,826: DEBUG/ForkPoolWorker-1] Secsh channel 0 opened.
+[2018-07-29 18:30:00,828: DEBUG/ForkPoolWorker-1] [chan 0] Sesch channel 0 request ok
+[2018-07-29 18:30:00,834: DEBUG/ForkPoolWorker-1] [chan 0] EOF received (0)
+[2018-07-29 18:30:00,834: WARNING/ForkPoolWorker-1] superadmin
+[2018-07-29 18:30:00,834: DEBUG/ForkPoolWorker-1] team 2 ssh result: superadmin
+
+[2018-07-29 18:30:00,834: INFO/ForkPoolWorker-1] finished ssh check for team 2
+[2018-07-29 18:30:00,840: INFO/ForkPoolWorker-1] Task app.jobs.ssh_job.check_ssh_team2[f163a2f3-c3c4-4c75-9630-53a1a372ae09] succeeded in 0.31193147500016494s: None
+[2018-07-29 18:30:04,420: DEBUG/ForkPoolWorker-2] team2 smtp result: ScoringCheck-62bd6f93f88c3b9a
+[2018-07-29 18:30:04,420: INFO/ForkPoolWorker-2] finished smtp check for team2
+[2018-07-29 18:30:04,426: INFO/ForkPoolWorker-2] Task app.jobs.mail_job.check_smtp_team2[10964590-32da-4e58-aa30-b2db6ec766a2] succeeded in 4.248575859000994s: None
