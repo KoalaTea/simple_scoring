@@ -9,3 +9,4 @@ class LoginForm(FlaskForm):
 
 class ChangeForm(FlaskForm):
     password = StringField('password')
+    submit = SubmitField('change password')

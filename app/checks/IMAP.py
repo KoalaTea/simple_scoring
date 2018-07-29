@@ -1,11 +1,8 @@
-from ..mod_check import app
 import imaplib
 from logging import getLogger
 
 logger = getLogger('mod_check.IMAP')
 
-
-@app.task
 def check(host, port, username, password, use_ssl=False):
     # initialize result to None
     result = None

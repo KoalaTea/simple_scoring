@@ -1,6 +1,7 @@
 from . import db
+from flask_login import UserMixin
 
-class Auth(db.Model):
+class Auth(UserMixin, db.Model):
     id = db.Column (db.Integer, primary_key=True)
     name = db.Column(db.String(128), unique=True, nullable=False)
     password = db.Column(db.String(6), unique=True, nullable=False)
@@ -35,3 +36,9 @@ class SSHCreds(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     team = db.Column(db.String)
     password = db.Column(db.String)
+    def __init__(self, team, password):
+        self.team = team
+        self.password = password
+
+    def __repr__(self):
+        return f'<SSHCreds team="{self.team}" password="{self.password}"'

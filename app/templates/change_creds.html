@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <form method="POST">
+            <h1>{{ team }}</h1>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}
+            </p>
+            <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>

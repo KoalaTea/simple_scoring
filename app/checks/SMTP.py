@@ -1,4 +1,3 @@
-from ..mod_check import app
 from smtplib import SMTP, SMTPException
 from logging import getLogger
 from os import urandom
@@ -11,7 +10,6 @@ def rand_hex_str(length):
     return hexlify(urandom(length)).decode('utf8')
 
 
-@app.task
 def check(host, port, username, domain, password, use_ssl=False):
     result = False
 
